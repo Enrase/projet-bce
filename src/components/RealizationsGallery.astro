@@ -1,0 +1,225 @@
+---
+import ImagePlaceholder from './ImagePlaceholder.astro';
+---
+
+<section class="py-20 px-6 bg-slate-50">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center space-x-2 bg-white px-4 py-2 rounded-full mb-6">
+        <span class="text-slate-700 text-sm font-medium">NOS RÉALISATIONS</span>
+      </div>
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6 tracking-tight">
+        Installations récentes en Gironde
+      </h2>
+      <p class="text-lg text-slate-600 max-w-4xl mx-auto leading-relaxed">
+        Découvrez quelques-unes de nos dernières réalisations : climatisation, pompes à chaleur, 
+        plomberie et installations électriques pour particuliers et professionnels.
+      </p>
+    </div>
+
+    <!-- Grille de réalisations -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+      
+      <!-- Installation pompe à chaleur -->
+      <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <ImagePlaceholder 
+          width="w-full"
+          height="h-48"
+          title="Pompe à chaleur air/eau"
+          description="Installation PAC 12kW, maison 150m², Bordeaux"
+          category="installation"
+          src="/images/installations/pac.jpg"
+          alt="Installation pompe à chaleur extérieure"
+        />
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="font-semibold text-slate-900">Pompe à chaleur air/eau</h3>
+            <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs font-medium">RGE</span>
+          </div>
+          <p class="text-sm text-slate-600 mb-4">
+            Installation complète avec unité extérieure et raccordement hydraulique. 
+            Économies d'énergie de 60% par rapport à l'ancien système.
+          </p>
+          <div class="flex items-center text-xs text-slate-500">
+            <span>📍 Bordeaux</span>
+            <span class="mx-2">•</span>
+            <span>🗓 Mars 2024</span>
+            <span class="mx-2">•</span>
+            <span>⭐ 5/5</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Climatisation bureaux -->
+      <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <ImagePlaceholder 
+          width="w-full"
+          height="h-48"
+          title="Climatisation gainable bureaux"
+          description="Système multi-zones 300m², tertiaire"
+          category="installation"
+          src="/images/installations/bureau.jpg"
+          alt="Bureau moderne avec climatisation"
+        />
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="font-semibold text-slate-900">Climatisation gainable</h3>
+            <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-medium">PRO</span>
+          </div>
+          <p class="text-sm text-slate-600 mb-4">
+            Installation gainable multi-zones pour bureaux. Contrôle individuel 
+            par zone, programmation intelligente.
+          </p>
+          <div class="flex items-center text-xs text-slate-500">
+            <span>📍 Mérignac</span>
+            <span class="mx-2">•</span>
+            <span>🗓 Février 2024</span>
+            <span class="mx-2">•</span>
+            <span>⭐ 5/5</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rénovation salle de bain -->
+      <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <ImagePlaceholder 
+          width="w-full"
+          height="h-48"
+          title="Rénovation complète salle de bain"
+          description="Plomberie, électricité, carrelage moderne"
+          category="installation"
+          src="/images/installations/sdb.jpg"
+          alt="Salle de bain moderne rénovée"
+        />
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="font-semibold text-slate-900">Rénovation salle de bain</h3>
+            <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs font-medium">COMPLET</span>
+          </div>
+          <p class="text-sm text-slate-600 mb-4">
+            Rénovation complète : plomberie, électricité, carrelage, douche à l'italienne. 
+            Travail soigné et finitions premium.
+          </p>
+          <div class="flex items-center text-xs text-slate-500">
+            <span>📍 Pessac</span>
+            <span class="mx-2">•</span>
+            <span>🗓 Janvier 2024</span>
+            <span class="mx-2">•</span>
+            <span>⭐ 5/5</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panneaux solaires -->
+      <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <ImagePlaceholder 
+          width="w-full"
+          height="h-48"
+          title="Installation chauffe-eau solaire"
+          description="CESI 300L, capteurs thermiques, maison individuelle"
+          category="installation"
+          src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=600&h=400&fit=crop"
+          alt="Panneaux solaires sur toit de maison"
+        />
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="font-semibold text-slate-900">Chauffe-eau solaire</h3>
+            <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded text-xs font-medium">SOLAIRE</span>
+          </div>
+          <p class="text-sm text-slate-600 mb-4">
+            Installation CESI 300L avec capteurs thermiques. 70% d'économies 
+            sur l'eau chaude sanitaire, éligible aux aides d'État.
+          </p>
+          <div class="flex items-center text-xs text-slate-500">
+            <span>📍 Talence</span>
+            <span class="mx-2">•</span>
+            <span>🗓 Avril 2024</span>
+            <span class="mx-2">•</span>
+            <span>⭐ 5/5</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tableau électrique -->
+      <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <ImagePlaceholder 
+          width="w-full"
+          height="h-48"
+          title="Mise aux normes électrique"
+          description="Tableau électrique, disjoncteurs, mise à la terre"
+          category="installation"
+          src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&h=400&fit=crop"
+          alt="Tableau électrique moderne"
+        />
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="font-semibold text-slate-900">Mise aux normes NF C 15-100</h3>
+            <span class="bg-yellow-100 text-yellow-700 px-2 py-1 rounded text-xs font-medium">SÉCURITÉ</span>
+          </div>
+          <p class="text-sm text-slate-600 mb-4">
+            Remplacement tableau électrique, mise aux normes complète, 
+            ajout prises et éclairage LED.
+          </p>
+          <div class="flex items-center text-xs text-slate-500">
+            <span>📍 Villenave-d'Ornon</span>
+            <span class="mx-2">•</span>
+            <span>🗓 Mars 2024</span>
+            <span class="mx-2">•</span>
+            <span>⭐ 5/5</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Installation mixte -->
+      <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <ImagePlaceholder 
+          width="w-full"
+          height="h-48"
+          title="Projet global maison neuve"
+          description="Clim + Plomberie + Électricité, maison 200m²"
+          category="installation"
+          src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop"
+          alt="Maison moderne neuve"
+        />
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="font-semibold text-slate-900">Projet global neuf</h3>
+            <span class="bg-indigo-100 text-indigo-700 px-2 py-1 rounded text-xs font-medium">GLOBAL</span>
+          </div>
+          <p class="text-sm text-slate-600 mb-4">
+            Projet complet maison neuve : climatisation multi-splits, 
+            plomberie sanitaire, installations électriques.
+          </p>
+          <div class="flex items-center text-xs text-slate-500">
+            <span>📍 Le Bouscat</span>
+            <span class="mx-2">•</span>
+            <span>🗓 Mai 2024</span>
+            <span class="mx-2">•</span>
+            <span>⭐ 5/5</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to action réalisations -->
+    <div class="text-center">
+      <div class="bg-white rounded-lg p-8 shadow-lg max-w-4xl mx-auto">
+        <h3 class="text-2xl font-bold text-slate-900 mb-4">
+          Plus de 500 installations réalisées en Gironde
+        </h3>
+        <p class="text-slate-600 mb-6 leading-relaxed">
+          Chaque projet est unique. Nos équipes s'adaptent à vos besoins spécifiques 
+          et vous accompagnent de la conception à la maintenance.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <button class="px-8 py-3 bg-slate-900 text-white rounded-md font-medium hover:bg-slate-800 transition-colors">
+            Voir toutes nos réalisations
+          </button>
+          <button class="px-8 py-3 border border-slate-300 text-slate-700 rounded-md font-medium hover:bg-slate-50 transition-colors">
+            Demander un devis
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

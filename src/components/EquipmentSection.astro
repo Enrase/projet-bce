@@ -1,0 +1,211 @@
+---
+import ImagePlaceholder from './ImagePlaceholder.astro';
+---
+
+<section class="py-20 px-6 bg-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center space-x-2 bg-slate-100 px-4 py-2 rounded-full mb-6">
+        <span class="text-slate-700 text-sm font-medium">ÉQUIPEMENTS & MATÉRIEL</span>
+      </div>
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6 tracking-tight">
+        Des équipements de qualité professionnelle
+      </h2>
+      <p class="text-lg text-slate-600 max-w-4xl mx-auto leading-relaxed">
+        Nous travaillons exclusivement avec des marques reconnues et du matériel certifié 
+        pour garantir la performance, la durabilité et la sécurité de nos installations.
+      </p>
+    </div>
+
+    <!-- Équipements par catégorie -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+      
+      <!-- Pompes à chaleur et climatisation -->
+      <div>
+        <h3 class="text-2xl font-bold text-slate-900 mb-8 flex items-center">
+          <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center mr-3">
+            <span class="text-white text-sm">❄</span>
+          </div>
+          Pompes à chaleur & Climatisation
+        </h3>
+        
+        <div class="grid grid-cols-2 gap-4 mb-6">
+          <ImagePlaceholder 
+            width="w-full"
+            height="h-32"
+            title="Unités extérieures Daikin"
+            description="Gamme professionnelle haute efficacité"
+            category="equipment"
+            src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=250&fit=crop"
+            alt="Unité extérieure de climatisation"
+          />
+          <ImagePlaceholder 
+            width="w-full"
+            height="h-32"
+            title="Splits muraux Mitsubishi"
+            description="Design moderne, technologie Inverter"
+            category="equipment"
+            src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=250&fit=crop"
+            alt="Split mural climatisation intérieur"
+          />
+        </div>
+        
+        <div class="bg-slate-50 rounded-lg p-6">
+          <h4 class="font-semibold text-slate-900 mb-3">Marques partenaires</h4>
+          <div class="grid grid-cols-2 gap-4 text-sm">
+            <div>
+              <p class="text-slate-600 mb-1">• <strong>Daikin</strong> - Leader mondial</p>
+              <p class="text-slate-600 mb-1">• <strong>Mitsubishi Electric</strong> - Technologie avancée</p>
+              <p class="text-slate-600">• <strong>Atlantic</strong> - Fabricant français</p>
+            </div>
+            <div>
+              <p class="text-slate-600 mb-1">• <strong>Panasonic</strong> - Innovation</p>
+              <p class="text-slate-600 mb-1">• <strong>LG</strong> - Performance</p>
+              <p class="text-slate-600">• <strong>Fujitsu</strong> - Fiabilité</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Plomberie et chauffage -->
+      <div>
+        <h3 class="text-2xl font-bold text-slate-900 mb-8 flex items-center">
+          <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center mr-3">
+            <span class="text-white text-sm">🔧</span>
+          </div>
+          Plomberie & Chauffage
+        </h3>
+        
+        <div class="grid grid-cols-2 gap-4 mb-6">
+          <ImagePlaceholder 
+            width="w-full"
+            height="h-32"
+            title="Chaudière gaz condensation"
+            description="Rendement >90%, labels énergétiques"
+            category="equipment"
+            src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=250&fit=crop"
+            alt="Chaudière moderne"
+          />
+          <ImagePlaceholder 
+            width="w-full"
+            height="h-32"
+            title="Sanitaire haut de gamme"
+            description="Robinetterie, WC suspendus, douches"
+            category="equipment"
+            src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=400&h=250&fit=crop"
+            alt="Robinetterie moderne salle de bain"
+          />
+        </div>
+        
+        <div class="bg-slate-50 rounded-lg p-6">
+          <h4 class="font-semibold text-slate-900 mb-3">Références qualité</h4>
+          <div class="grid grid-cols-2 gap-4 text-sm">
+            <div>
+              <p class="text-slate-600 mb-1">• <strong>Viessmann</strong> - Chaudières premium</p>
+              <p class="text-slate-600 mb-1">• <strong>Grohe</strong> - Robinetterie design</p>
+              <p class="text-slate-600">• <strong>Geberit</strong> - Systèmes sanitaires</p>
+            </div>
+            <div>
+              <p class="text-slate-600 mb-1">• <strong>Hansgrohe</strong> - Innovation</p>
+              <p class="text-slate-600 mb-1">• <strong>Villeroy & Boch</strong> - Élégance</p>
+              <p class="text-slate-600">• <strong>Duravit</strong> - Design</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Outils et véhicules professionnels -->
+    <div class="bg-slate-900 rounded-lg p-8 md:p-12 text-white mb-12">
+      <h3 class="text-2xl font-bold mb-8 text-center">Outils & Véhicules Professionnels</h3>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <ImagePlaceholder 
+            width="w-full"
+            height="h-40"
+            title="Véhicules atelier"
+            description="Camions équipés, stock mobile"
+            category="equipment"
+            src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=400&h=300&fit=crop"
+            alt="Camion d'artisan professionnel"
+          />
+          <h4 class="font-semibold mt-4 mb-2">Véhicules Atelier</h4>
+          <p class="text-slate-300 text-sm">Camions entièrement équipés avec stock de pièces détachées</p>
+        </div>
+        
+        <div class="text-center">
+          <ImagePlaceholder 
+            width="w-full"
+            height="h-40"
+            title="Outillage spécialisé"
+            description="Outils de mesure, soudure, test"
+            category="equipment"
+            src="https://images.unsplash.com/photo-1609205264055-a55a1f613c5c?w=400&h=300&fit=crop"
+            alt="Outils professionnels électricien"
+          />
+          <h4 class="font-semibold mt-4 mb-2">Outillage Spécialisé</h4>
+          <p class="text-slate-300 text-sm">Équipements de pointe : analyseurs, détecteurs, testeurs</p>
+        </div>
+        
+        <div class="text-center">
+          <ImagePlaceholder 
+            width="w-full"
+            height="h-40"
+            title="Matériel de sécurité"
+            description="EPI, échafaudages, protection"
+            category="equipment"
+            src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=300&fit=crop"
+            alt="Casques et équipements de sécurité"
+          />
+          <h4 class="font-semibold mt-4 mb-2">Sécurité Chantier</h4>
+          <p class="text-slate-300 text-sm">EPI complets, matériel de protection, sécurité maximale</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certifications matériel -->
+    <div class="text-center">
+      <h3 class="text-2xl font-bold text-slate-900 mb-8">
+        Certifications & Labels de nos équipements
+      </h3>
+      
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-center max-w-4xl mx-auto">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-2">
+            <span class="text-green-600 font-bold text-xs">CE</span>
+          </div>
+          <p class="text-xs text-slate-600 font-medium">Conformité<br>Européenne</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-2">
+            <span class="text-blue-600 font-bold text-xs">A+++</span>
+          </div>
+          <p class="text-xs text-slate-600 font-medium">Efficacité<br>Énergétique</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-2">
+            <span class="text-purple-600 font-bold text-xs">NF</span>
+          </div>
+          <p class="text-xs text-slate-600 font-medium">Norme<br>Française</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-2">
+            <span class="text-orange-600 font-bold text-xs">ACS</span>
+          </div>
+          <p class="text-xs text-slate-600 font-medium">Attestation<br>Conformité Sanitaire</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mx-auto mb-2">
+            <span class="text-red-600 font-bold text-xs">EPV</span>
+          </div>
+          <p class="text-xs text-slate-600 font-medium">Entreprise<br>Patrimoine Vivant</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

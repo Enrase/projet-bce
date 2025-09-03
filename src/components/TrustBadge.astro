@@ -1,0 +1,21 @@
+---
+export interface Props {
+  value: string;
+  label: string;
+  highlight?: boolean;
+}
+
+const { value, label, highlight = false } = Astro.props;
+---
+
+<div class="text-center p-6">
+  <div class={`text-4xl font-bold mb-2 ${highlight ? 'text-slate-900' : 'text-slate-800'}`}>
+    {value}
+  </div>
+  <div class="text-slate-600 text-sm font-medium uppercase tracking-wider">
+    {label}
+  </div>
+  {highlight && (
+    <div class="w-12 h-0.5 bg-blue-600 mx-auto mt-3"></div>
+  )}
+</div>

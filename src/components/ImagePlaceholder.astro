@@ -1,0 +1,73 @@
+---
+export interface Props {
+  width: string;
+  height: string;
+  title: string;
+  description?: string;
+  category: 'team' | 'installation' | 'equipment' | 'certification' | 'office';
+  src?: string;
+  alt?: string;
+}
+
+const { width, height, title, description, category, src, alt } = Astro.props;
+
+const categoryColors = {
+  team: 'from-blue-100 to-blue-200',
+  installation: 'from-green-100 to-green-200', 
+  equipment: 'from-slate-100 to-slate-200',
+  certification: 'from-yellow-100 to-yellow-200',
+  office: 'from-purple-100 to-purple-200'
+};
+
+const categoryIcons = {
+  team: '👥',
+  installation: '🏠',
+  equipment: '🔧',
+  certification: '📜',
+  office: '🏢'
+};
+---
+
+<div class={`relative ${width} ${height} rounded-lg border border-slate-200 overflow-hidden group`}>
+  {src ? (
+    <!-- Image réelle -->
+    <img 
+      src={src} 
+      alt={alt || title}
+      class="w-full h-full object-cover"
+      loading="lazy"
+    />
+  ) : (
+    <!-- Placeholder -->
+    <div class={`w-full h-full bg-gradient-to-br ${categoryColors[category]}`}>
+      <!-- Overlay avec informations -->
+      <div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
+        <div class="text-4xl mb-3 opacity-60">{categoryIcons[category]}</div>
+        <h3 class="font-semibold text-slate-800 mb-2 text-sm">{title}</h3>
+        {description && (
+          <p class="text-xs text-slate-600 leading-relaxed">{description}</p>
+        )}
+      </div>
+      
+      <!-- Indication "Photo à venir" -->
+      <div class="absolute top-2 right-2 bg-white bg-opacity-90 px-2 py-1 rounded text-xs text-slate-500 font-medium">
+        Photo réelle
+      </div>
+    </div>
+  )}
+  
+  <!-- Overlay avec titre si image réelle -->
+  {src && (
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      <div class="absolute bottom-4 left-4 right-4 text-white">
+        <h3 class="font-semibold text-sm">{title}</h3>
+        {description && (
+          <p class="text-xs opacity-90 mt-1">{description}</p>
+        )}
+      </div>
+    </div>
+  )}
+  
+  <!-- Effet hover -->
+  <div class="absolute inset-0 bg-slate-900 bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
+</div>

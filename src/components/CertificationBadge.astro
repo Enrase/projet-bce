@@ -1,0 +1,19 @@
+---
+export interface Props {
+  label: string;
+  description: string;
+  icon?: string;
+}
+
+const { label, description, icon = "🏅" } = Astro.props;
+---
+
+<div class="bg-gradient-to-br from-green-50 to-emerald-100 rounded-xl p-6 border border-green-200">
+  <div class="flex items-center space-x-3 mb-3">
+    <span class="text-2xl">{icon}</span>
+    <h3 class="font-bold text-green-800">{label}</h3>
+  </div>
+  <p class="text-green-700 text-sm leading-relaxed">
+    {description}
+  </p>
+</div>

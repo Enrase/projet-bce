@@ -1,0 +1,6 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#E2E8F0"/>
+  <circle cx="200" cy="160" r="50" fill="#64748B"/>
+  <path d="M120 300 Q200 260 280 300 L280 400 L120 400 Z" fill="#64748B"/>
+  <text x="200" y="350" text-anchor="middle" font-family="Arial" font-size="14" fill="#475569">Photo équipe</text>
+</svg>

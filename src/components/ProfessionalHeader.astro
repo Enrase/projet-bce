@@ -1,0 +1,58 @@
+---
+import BrandLogo from './BrandLogo.astro';
+---
+
+<header class="bg-white shadow-sm sticky top-0 z-50">
+  <!-- Bande supérieure avec informations de contact -->
+  <div class="bg-slate-800 text-white py-2 px-6">
+    <div class="max-w-7xl mx-auto flex justify-between items-center text-sm">
+      <div class="flex items-center space-x-6">
+        <div class="flex items-center space-x-2">
+          <span class="text-blue-400">📧</span>
+          <span>contact@bordeaux-confort-energie.fr</span>
+        </div>
+        <div class="flex items-center space-x-2">
+          <span class="text-green-400">📞</span>
+          <span class="font-semibold">05 XX XX XX XX</span>
+        </div>
+      </div>
+      <div class="hidden md:flex items-center space-x-4">
+        <div class="flex items-center space-x-2">
+          <span class="text-yellow-400">🕒</span>
+          <span>Service d'urgence 24h/7j</span>
+        </div>
+        <div class="bg-green-600 px-3 py-1 rounded-full text-xs font-semibold">
+          RGE CERTIFIÉ
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation principale -->
+  <nav class="px-6 py-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <BrandLogo variant="full" size="md" theme="light" />
+      
+      <div class="hidden lg:flex items-center space-x-8">
+        <div class="flex space-x-8 text-slate-600">
+          <a href="#services" class="hover:text-blue-600 transition-colors font-medium">Nos Services</a>
+          <a href="#certifications" class="hover:text-blue-600 transition-colors font-medium">Certifications</a>
+          <a href="#temoignages" class="hover:text-blue-600 transition-colors font-medium">Témoignages</a>
+          <a href="#contact" class="hover:text-blue-600 transition-colors font-medium">Contact</a>
+        </div>
+        <button class="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg">
+          Devis Gratuit
+        </button>
+      </div>
+      
+      <!-- Menu mobile -->
+      <button class="lg:hidden p-2">
+        <div class="w-6 h-6 flex flex-col justify-center space-y-1">
+          <div class="w-full h-0.5 bg-slate-600"></div>
+          <div class="w-full h-0.5 bg-slate-600"></div>
+          <div class="w-full h-0.5 bg-slate-600"></div>
+        </div>
+      </button>
+    </div>
+  </nav>
+</header>

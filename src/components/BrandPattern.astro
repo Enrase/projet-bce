@@ -1,0 +1,102 @@
+---
+export interface Props {
+  pattern?: 'hexagon' | 'circuit' | 'energy' | 'waves';
+  intensity?: 'subtle' | 'medium' | 'strong';
+  color?: 'blue' | 'orange' | 'mixed';
+}
+
+const { pattern = 'energy', intensity = 'subtle', color = 'mixed' } = Astro.props;
+
+const getOpacity = () => {
+  switch (intensity) {
+    case 'subtle': return '0.05';
+    case 'medium': return '0.1';
+    case 'strong': return '0.15';
+    default: return '0.05';
+  }
+};
+
+const getColors = () => {
+  switch (color) {
+    case 'blue': return { primary: '#3B82F6', secondary: '#06B6D4' };
+    case 'orange': return { primary: '#EA580C', secondary: '#F97316' };
+    case 'mixed': return { primary: '#3B82F6', secondary: '#EA580C' };
+    default: return { primary: '#3B82F6', secondary: '#EA580C' };
+  }
+};
+
+const colors = getColors();
+const opacity = getOpacity();
+---
+
+<div class="absolute inset-0 overflow-hidden pointer-events-none">
+  {pattern === 'hexagon' && (
+    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="hexagon" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+          <polygon points="20,5 35,15 35,25 20,35 5,25 5,15" fill="none" stroke={colors.primary} stroke-width="1" opacity={opacity}/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#hexagon)"/>
+    </svg>
+  )}
+  
+  {pattern === 'circuit' && (
+    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="circuit" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+          <g opacity={opacity}>
+            <path d="M10,30 L25,30 M35,30 L50,30 M30,10 L30,25 M30,35 L30,50" stroke={colors.primary} stroke-width="2" fill="none"/>
+            <circle cx="30" cy="30" r="3" fill={colors.secondary}/>
+            <rect x="22" y="22" width="16" height="16" rx="2" fill="none" stroke={colors.primary} stroke-width="1"/>
+          </g>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#circuit)"/>
+    </svg>
+  )}
+  
+  {pattern === 'energy' && (
+    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+      <g opacity={opacity}>
+        <!-- Lignes d'énergie dynamiques -->
+        <path d="M0,200 Q200,150 400,200 T800,200" stroke={colors.primary} stroke-width="2" fill="none"/>
+        <path d="M0,400 Q200,350 400,400 T800,400" stroke={colors.secondary} stroke-width="2" fill="none"/>
+        
+        <!-- Points d'énergie -->
+        <circle cx="150" cy="180" r="4" fill={colors.primary}/>
+        <circle cx="350" cy="220" r="3" fill={colors.secondary}/>
+        <circle cx="550" cy="200" r="4" fill={colors.primary}/>
+        <circle cx="250" cy="380" r="3" fill={colors.secondary}/>
+        <circle cx="450" cy="420" r="4" fill={colors.primary}/>
+        
+        <!-- Hexagones énergétiques -->
+        <polygon points="100,80 120,90 120,110 100,120 80,110 80,90" fill="none" stroke={colors.primary} stroke-width="1"/>
+        <polygon points="600,480 620,490 620,510 600,520 580,510 580,490" fill="none" stroke={colors.secondary} stroke-width="1"/>
+      </g>
+    </svg>
+  )}
+  
+  {pattern === 'waves' && (
+    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+      <g opacity={opacity}>
+        <path d="M0,300 Q200,250 400,300 T800,300" stroke={colors.primary} stroke-width="3" fill="none"/>
+        <path d="M0,320 Q200,270 400,320 T800,320" stroke={colors.secondary} stroke-width="2" fill="none"/>
+        <path d="M0,280 Q200,230 400,280 T800,280" stroke={colors.primary} stroke-width="1" fill="none"/>
+      </g>
+    </svg>
+  )}
+</div>
+
+<style>
+  svg {
+    animation: float 20s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateX(0) translateY(0); }
+    25% { transform: translateX(10px) translateY(-5px); }
+    50% { transform: translateX(0) translateY(-10px); }
+    75% { transform: translateX(-10px) translateY(-5px); }
+  }
+</style>

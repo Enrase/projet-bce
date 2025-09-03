@@ -1,0 +1,31 @@
+---
+export interface Props {
+  text: string;
+  author?: string;
+}
+
+const { text, author } = Astro.props;
+---
+
+<div class="bg-white rounded-2xl p-6 shadow-lg">
+  <div class="flex items-start space-x-2 mb-4">
+    <div class="flex space-x-1">
+      {Array.from({ length: 5 }).map((_, i) => (
+        <span class="text-yellow-400 text-lg">★</span>
+      ))}
+    </div>
+  </div>
+  
+  <p class="text-slate-600 leading-relaxed mb-4 italic">
+    "{text}"
+  </p>
+  
+  {author && (
+    <div class="flex items-center">
+      <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+        <span class="text-blue-600 font-semibold text-sm">{author.charAt(0)}</span>
+      </div>
+      <span class="text-slate-700 font-medium">{author}</span>
+    </div>
+  )}
+</div>

@@ -1,16 +1,544 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import TestimonialCard from '../components/TestimonialCard.astro';
+import CertificationBadge from '../components/CertificationBadge.astro';
+import ProfessionalHeader from '../components/ProfessionalHeader.astro';
+import TrustBadge from '../components/TrustBadge.astro';
+import GuaranteeSection from '../components/GuaranteeSection.astro';
+import CorporateIcon from '../components/CorporateIcon.astro';
+import TeamSection from '../components/TeamSection.astro';
+import RealizationsGallery from '../components/RealizationsGallery.astro';
+import EquipmentSection from '../components/EquipmentSection.astro';
+import BrandPattern from '../components/BrandPattern.astro';
+import HeroAnimations from '../components/HeroAnimations.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Bordeaux Confort Énergie - Climatisation, Pompes à Chaleur & Plomberie">
+  <ProfessionalHeader />
+  <main class="relative overflow-hidden">
+
+    <!-- Hero Section Corporate -->
+    <section class="relative px-6 py-20 md:py-32 bg-gradient-to-br from-blue-50 via-white to-orange-50 overflow-hidden">
+      <!-- Brand Pattern Background -->
+      <BrandPattern pattern="energy" intensity="subtle" color="mixed" />
+      
+      <!-- Hero Animations -->
+      <HeroAnimations />
+
+      <div class="relative z-10 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <!-- Texte principal - positionnement asymétrique -->
+          <div class="lg:col-span-7 lg:col-start-2">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight hero-title">
+              <span class="text-slate-900 animate-slide-up" style="animation-delay: 0.2s;">Solutions énergétiques</span>
+              <br>
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-700 to-cyan-600 block animate-slide-up" style="animation-delay: 0.4s;">professionnelles</span>
+              <br>
+              <span class="text-slate-700 text-2xl md:text-3xl lg:text-4xl font-medium mt-4 block animate-slide-up" style="animation-delay: 0.6s;">
+                Expertise certifiée RGE en Gironde
+              </span>
+            </h1>
+            
+            <p class="mt-8 text-lg text-slate-600 max-w-2xl leading-relaxed animate-fade-in" style="animation-delay: 0.8s;">
+              Bordeaux Confort Énergie accompagne particuliers et professionnels dans leurs projets 
+              de confort thermique avec des solutions techniques performantes, durables et conformes 
+              aux normes environnementales les plus exigeantes.
+            </p>
+
+            <div class="mt-12 flex flex-col sm:flex-row gap-4 animate-bounce-in" style="animation-delay: 1s;">
+              <button class="px-8 py-4 bg-gradient-to-r from-orange-600 to-orange-700 text-white rounded-lg font-semibold hover:from-orange-700 hover:to-orange-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105 relative overflow-hidden btn-shimmer">
+                <span class="relative z-10">Demander un devis gratuit</span>
+              </button>
+              <button class="px-8 py-4 border-2 border-blue-600 text-blue-600 rounded-lg font-semibold hover:bg-blue-50 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+                Nos réalisations
+              </button>
+            </div>
+          </div>
+
+          <!-- Zone visuelle corporate -->
+          <div class="lg:col-span-4 relative animate-float" style="animation-delay: 1.2s;">
+            <div class="relative">
+              <!-- Image professionnelle -->
+              <div class="w-full h-96 rounded-lg shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 transform hover:scale-105 hover:rotate-1 relative">
+                <img 
+                  src="/images/installations/pac.jpg" 
+                  alt="Installation pompe à chaleur BCE"
+                  class="w-full h-full object-cover"
+                  onerror="console.log('Image failed to load:', this.src)"
+                />
+                
+                <!-- Overlay avec informations -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent">
+                  <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+                    <div class="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-6 shadow-xl animate-pulse-glow">
+                      <CorporateIcon name="certification" className="text-white" size="xl" />
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-center tracking-tight">Expertise Certifiée</h3>
+                    <p class="text-center text-sm leading-relaxed opacity-90">
+                      +15 ans d'expérience<br>
+                      Certifications RGE QualiPAC & QualiSol<br>
+                      +500 installations réalisées
+                    </p>
+                  </div>
+                </div>
+                
+                <!-- Effet de brillance qui passe -->
+                <div class="absolute inset-0 rounded-lg opacity-0 hover:opacity-100 transition-opacity duration-700">
+                  <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 transform -skew-x-12 animate-shine"></div>
+                </div>
+              </div>
+              
+              <!-- Badge certification flottant -->
+              <div class="absolute -top-4 -right-4 bg-gradient-to-r from-orange-600 to-orange-700 text-white px-4 py-2 rounded-lg text-sm font-semibold shadow-lg animate-bounce-soft">
+                RGE CERTIFIÉ
+              </div>
+              
+              <!-- Cercles décoratifs flottants -->
+              <div class="absolute -top-2 -left-2 w-4 h-4 bg-blue-400 rounded-full opacity-60 animate-float-reverse"></div>
+              <div class="absolute -bottom-3 -right-3 w-6 h-6 bg-orange-400 rounded-full opacity-50 animate-float" style="animation-delay: 0.5s;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section Corporate -->
+    <section id="services" class="py-24 px-6 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-20">
+          <div class="inline-flex items-center space-x-2 bg-slate-100 px-4 py-2 rounded-full mb-6">
+            <span class="text-slate-700 text-sm font-medium">NOS SERVICES</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6 tracking-tight">
+            Expertise technique certifiée
+          </h2>
+          <p class="text-lg text-slate-600 max-w-4xl mx-auto leading-relaxed">
+            Solutions professionnelles pour l'efficacité énergétique, le confort thermique et 
+            la transition écologique, conçues et installées selon les standards les plus élevés.
+          </p>
+        </div>
+
+        <!-- Services avec layout asymétrique -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-16">
+          <ServiceCard 
+            icon="air-conditioning"
+            title="Climatisation réversible"
+            description="Installation de climatisations réversibles pour un confort thermique optimal toute l'année, avec systèmes haute efficacité énergétique."
+          />
+          
+          <ServiceCard 
+            icon="heat-pump"
+            title="Pompes à chaleur"
+            description="Mise en place de pompes à chaleur air/air et air/eau haute performance pour une solution de chauffage écologique et économique."
+            offset={true}
+          />
+          
+          <ServiceCard 
+            icon="plumbing"
+            title="Plomberie & Sanitaire"
+            description="Installations sanitaires complètes, rénovation et optimisation de vos réseaux d'eau avec matériaux certifiés."
+          />
+          
+          <ServiceCard 
+            icon="electrical"
+            title="Installations électriques"
+            description="Mise aux normes NF C 15-100, tableaux électriques, éclairage, création et adaptation d'installations sécurisées."
+            offset={true}
+          />
+          
+          <ServiceCard 
+            icon="solar"
+            title="Énergies renouvelables"
+            description="Chauffe-eau solaires individuels (CESI) et systèmes solaires combinés (SSC) pour réduire votre empreinte carbone."
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Équipe -->
+    <TeamSection />
+
+    <!-- Galerie de Réalisations -->
+    <RealizationsGallery />
+
+    <!-- Section Équipements -->
+    <EquipmentSection />
+
+    <!-- Section Performance & Indicateurs -->
+    <section class="py-20 px-6 bg-slate-50">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">
+            Performance & fiabilité
+          </h2>
+          <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+            Indicateurs de performance qui témoignent de notre expertise 
+            et de la confiance accordée par nos clients.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+          <div class="bg-white border border-slate-200 rounded-lg">
+            <TrustBadge 
+              value="+15"
+              label="Années d'expérience"
+              highlight={true}
+            />
+          </div>
+          
+          <div class="bg-white border border-slate-200 rounded-lg">
+            <TrustBadge 
+              value="+500"
+              label="Installations réalisées"
+            />
+          </div>
+          
+          <div class="bg-white border border-slate-200 rounded-lg">
+            <TrustBadge 
+              value="98%"
+              label="Clients satisfaits"
+              highlight={true}
+            />
+          </div>
+          
+          <div class="bg-white border border-slate-200 rounded-lg">
+            <TrustBadge 
+              value="24h/7j"
+              label="Service d'urgence"
+            />
+          </div>
+        </div>
+        
+        <!-- Zone de réassurance corporat -->
+        <div class="bg-slate-900 rounded-lg p-8 md:p-12 text-white">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-white bg-opacity-10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <CorporateIcon name="tools" className="text-white" size="lg" />
+              </div>
+              <h3 class="text-xl font-semibold mb-3 tracking-tight">Excellence Technique</h3>
+              <p class="text-slate-300 text-sm leading-relaxed">Techniciens certifiés, formation continue, maîtrise des innovations énergétiques et respect des normes professionnelles.</p>
+            </div>
+            <div class="text-center">
+              <div class="w-16 h-16 bg-white bg-opacity-10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <CorporateIcon name="shield" className="text-white" size="lg" />
+              </div>
+              <h3 class="text-xl font-semibold mb-3 tracking-tight">Garanties Professionnelles</h3>
+              <p class="text-slate-300 text-sm leading-relaxed">Assurance décennale active, certifications RGE à jour, conformité réglementaire et suivi qualité rigoureux.</p>
+            </div>
+            <div class="text-center">
+              <div class="w-16 h-16 bg-white bg-opacity-10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <CorporateIcon name="solar" className="text-white" size="lg" />
+              </div>
+              <h3 class="text-xl font-semibold mb-3 tracking-tight">Transition Énergétique</h3>
+              <p class="text-slate-300 text-sm leading-relaxed">Énergies renouvelables, efficacité énergétique, solutions bas carbone pour un avenir durable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Certifications RGE -->
+    <section id="certifications" class="py-16 px-6 bg-gradient-to-br from-blue-50 to-cyan-50 relative">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+          <div class="inline-flex items-center space-x-2 bg-green-100 px-4 py-2 rounded-full mb-6">
+            <span class="text-green-600 text-sm font-semibold">✅ CERTIFIÉ</span>
+            <span class="text-green-800 text-sm font-medium">Reconnu Garant de l'Environnement</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+            Entreprise certifiée RGE QualiPAC & QualiSol
+          </h2>
+          <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+            Grâce à nos qualifications RGE, vous bénéficiez de l'expertise d'un installateur certifié, 
+            reconnu pour la qualité de son travail et la maîtrise des normes énergétiques.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <CertificationBadge 
+            label="RGE QualiPAC"
+            description="Certification officielle pour l'installation de pompes à chaleur haute performance, gage de qualité et d'expertise technique"
+            icon="🏅"
+          />
+          
+          <CertificationBadge 
+            label="RGE Qualisol CESI"
+            description="Spécialisation chauffe-eau solaire individuel certifiée, pour une transition énergétique durable"
+            icon="☀️"
+          />
+          
+          <CertificationBadge 
+            label="RGE Qualisol SSC"
+            description="Expert certifié en systèmes solaires combinés pour chauffage et eau chaude sanitaire"
+            icon="🌟"
+          />
+        </div>
+        
+        <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl">
+          <h3 class="text-2xl md:text-3xl font-bold text-slate-800 mb-8 text-center">
+            Vos avantages exclusifs avec nos certifications RGE
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="text-center">
+              <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <span class="text-white text-3xl">✓</span>
+              </div>
+              <h4 class="font-bold text-slate-800 mb-2">Travail de Qualité Certifiée</h4>
+              <p class="text-slate-600 text-sm leading-relaxed">Installations conformes aux normes les plus strictes, contrôlées et auditées régulièrement</p>
+            </div>
+            <div class="text-center">
+              <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <span class="text-white text-3xl">💰</span>
+              </div>
+              <h4 class="font-bold text-slate-800 mb-2">Accès aux Aides d'État</h4>
+              <p class="text-slate-600 text-sm leading-relaxed">Éligibilité garantie : MaPrimeRénov', CEE, TVA 5.5%, accompagnement administratif complet</p>
+            </div>
+            <div class="text-center">
+              <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <span class="text-white text-3xl">🛡️</span>
+              </div>
+              <h4 class="font-bold text-slate-800 mb-2">Garantie Professionnelle</h4>
+              <p class="text-slate-600 text-sm leading-relaxed">Professionnel reconnu et audité, assurance décennale, suivi qualité post-installation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Garanties Professionnelles -->
+    <GuaranteeSection />
+
+    <!-- Section Témoignages -->
+    <section id="temoignages" class="py-20 px-6 bg-slate-100 relative">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <div class="inline-flex items-center space-x-2 bg-yellow-100 px-4 py-2 rounded-full mb-6">
+            <span class="text-yellow-600 text-sm font-semibold">★★★★★</span>
+            <span class="text-yellow-800 text-sm font-medium">4.9/5 sur Google Reviews</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+            Ce que disent nos clients
+          </h2>
+          <p class="text-xl text-slate-600">
+            Plus de 200 avis clients vérifient notre expertise
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <TestimonialCard 
+            text="Fabien et William sont à la fois sympathiques, réactifs, pédagogues, sérieux et très efficaces. J'ai été très très très satisfaite de leur travail, de leur professionnalisme. Je recommande +++++."
+            author="Marie D."
+          />
+          
+          <TestimonialCard 
+            text="J'ai fait appel à Bordeaux Confort Énergie pour l'installation de notre climatisation. Le travail a été réalisé rapidement et avec beaucoup de soin. Je recommande vivement leurs services."
+            author="Philippe M."
+          />
+          
+          <TestimonialCard 
+            text="Super installation du système clim au bureau. Bons prix, super service et échanges fluides et agréables. Pas de surprise, parfait."
+            author="Sarah L."
+          />
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <TestimonialCard 
+            text="Je suis très satisfaite du travail réalisé. Ils sont très professionnels à tout point de vue en plus d'être très sympathiques: travail soigné et consciencieux, très à l'écoute. Ce fût un plaisir de coconstruire ce projet avec eux, et rassurant."
+            author="Christine R."
+          />
+          
+          <TestimonialCard 
+            text="BCE est intervenue pour la mise en place d'une climatisation gainée réversible et la pose de toilettes japonaises. L'équipe a été de très bon conseil, très professionnelle et très sympathique. Nous sommes très satisfaits de la prestation."
+            author="Jean & Martine P."
+          />
+        </div>
+        
+        <!-- Lien vers plus de témoignages -->
+        <div class="text-center mt-12">
+          <a href="#" class="inline-flex items-center space-x-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+            <span>Voir tous nos avis clients</span>
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Rassurance -->
+    <section class="py-20 px-6 bg-gradient-to-br from-blue-50 to-cyan-50 relative">
+      <div class="absolute inset-0 overflow-hidden">
+        <div class="absolute top-10 left-10 w-20 h-20 bg-blue-200 rounded-full opacity-30"></div>
+        <div class="absolute bottom-20 right-20 w-32 h-32 bg-cyan-200 rounded-full opacity-20"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-6">
+              Pourquoi choisir Bordeaux Confort Énergie ?
+            </h2>
+            <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+              En choisissant Bordeaux Confort Énergie, vous optez pour une entreprise de proximité, 
+              à l'écoute de vos attentes, et engagée dans une démarche de qualité, 
+              de transparence et de performance énergétique.
+            </p>
+            <div class="space-y-6">
+              <div class="flex items-start space-x-4">
+                <div class="w-6 h-6 bg-blue-600 rounded-full flex-shrink-0 flex items-center justify-center mt-1">
+                  <span class="text-white text-xs">✓</span>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-slate-800 mb-1">Plomberie fiable & chauffage efficace</h3>
+                  <p class="text-slate-600">Nos services jouent un rôle crucial dans le confort énergétique des habitants de Bordeaux.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start space-x-4">
+                <div class="w-6 h-6 bg-blue-600 rounded-full flex-shrink-0 flex items-center justify-center mt-1">
+                  <span class="text-white text-xs">✓</span>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-slate-800 mb-1">Climatisation adaptée & ventilation optimale</h3>
+                  <p class="text-slate-600">Nous contribuons à améliorer la qualité de vie et à réduire les coûts énergétiques.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start space-x-4">
+                <div class="w-6 h-6 bg-blue-600 rounded-full flex-shrink-0 flex items-center justify-center mt-1">
+                  <span class="text-white text-xs">✓</span>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-slate-800 mb-1">Environnement domestique sain</h3>
+                  <p class="text-slate-600">Faites confiance à Bordeaux Confort Énergie pour un environnement domestique sain et confortable.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div class="bg-white rounded-3xl p-8 shadow-2xl">
+              <div class="text-center mb-6">
+                <h3 class="text-2xl font-bold text-slate-800 mb-2">Contactez-nous dès aujourd'hui</h3>
+                <p class="text-slate-600">Pour plus d'informations sur nos services ou pour demander un devis personnalisé, notre équipe est à votre disposition.</p>
+              </div>
+              
+              <form class="space-y-4">
+                <div>
+                  <input type="text" placeholder="Votre nom" class="w-full px-4 py-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                </div>
+                <div>
+                  <input type="email" placeholder="Votre email" class="w-full px-4 py-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                </div>
+                <div>
+                  <input type="tel" placeholder="Votre téléphone" class="w-full px-4 py-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                </div>
+                <div>
+                  <textarea placeholder="Décrivez votre projet" rows="4" class="w-full px-4 py-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+                </div>
+                <button type="submit" class="w-full px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg">
+                  Obtenir mon devis gratuit
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Professionnel -->
+    <footer class="bg-slate-900 text-white py-16 px-6">
+      <div class="max-w-7xl mx-auto">
+        <!-- Section principale du footer -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+          <div class="md:col-span-2">
+            <div class="flex items-center space-x-3 mb-6">
+              <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-cyan-700 rounded-xl flex items-center justify-center">
+                <span class="text-white font-bold text-xl">BCE</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold">Bordeaux Confort Énergie</h3>
+                <p class="text-slate-400 text-sm">Spécialiste énergies renouvelables • Certifié RGE</p>
+              </div>
+            </div>
+            <p class="text-slate-300 leading-relaxed mb-6">
+              Votre partenaire de confiance pour tous vos projets de confort thermique et énergétique en Gironde. 
+              Plus de 15 ans d'expertise au service de particuliers et professionnels.
+            </p>
+            <div class="flex items-center space-x-4">
+              <div class="bg-green-600 px-3 py-1 rounded-full text-xs font-semibold">
+                RGE CERTIFIÉ
+              </div>
+              <div class="bg-blue-600 px-3 py-1 rounded-full text-xs font-semibold">
+                ASSURANCE DÉCENNALE
+              </div>
+            </div>
+          </div>
+          
+          <div>
+            <h4 class="font-bold text-lg mb-6">Nos Services</h4>
+            <ul class="space-y-3 text-slate-300">
+              <li><a href="#" class="hover:text-white transition-colors">Climatisation réversible</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Pompes à chaleur</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Plomberie & Sanitaire</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Installations électriques</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Solutions solaires</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 class="font-bold text-lg mb-6">Contact & Urgence</h4>
+            <div class="space-y-4 text-slate-300">
+              <div class="flex items-start space-x-3">
+                <span class="text-blue-400">📍</span>
+                <div>
+                  <p class="font-semibold text-white">Zone d'intervention</p>
+                  <p class="text-sm">Bordeaux & Gironde</p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-3">
+                <span class="text-green-400">📞</span>
+                <div>
+                  <p class="font-semibold text-white">05 XX XX XX XX</p>
+                  <p class="text-sm">Urgence 24h/7j disponible</p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-3">
+                <span class="text-yellow-400">✉️</span>
+                <div>
+                  <p class="font-semibold text-white">contact@bordeaux-confort-energie.fr</p>
+                  <p class="text-sm">Réponse sous 2h ouvrées</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Barre de séparation avec informations légales -->
+        <div class="border-t border-slate-800 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div class="text-slate-400 text-sm">
+              &copy; 2024 Bordeaux Confort Énergie - Tous droits réservés
+            </div>
+            <div class="flex items-center space-x-6 text-slate-400 text-sm">
+              <a href="#" class="hover:text-white transition-colors">Mentions légales</a>
+              <a href="#" class="hover:text-white transition-colors">CGV</a>
+              <a href="#" class="hover:text-white transition-colors">Politique de confidentialité</a>
+            </div>
+            <div class="flex items-center space-x-4">
+              <span class="text-slate-400 text-sm">Suivez-nous :</span>
+              <div class="flex space-x-3">
+                <a href="#" class="w-8 h-8 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
+                  <span class="text-xs">f</span>
+                </a>
+                <a href="#" class="w-8 h-8 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
+                  <span class="text-xs">G</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+</Layout>
