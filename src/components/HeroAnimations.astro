@@ -276,21 +276,55 @@
   /* === RESPONSIVE === */
   @media (max-width: 768px) {
     .particle {
-      width: 6px;
-      height: 6px;
+      width: 4px;
+      height: 4px;
     }
     
     .energy-ring {
-      width: 60px !important;
-      height: 60px !important;
+      width: 40px !important;
+      height: 40px !important;
+      opacity: 0.3;
     }
     
     .energy-line {
-      width: 100px !important;
+      width: 80px !important;
+      height: 1px !important;
     }
     
     .light-ray {
-      height: 60px;
+      height: 40px;
+      width: 1px;
+    }
+    
+    /* Réduire l'intensité sur mobile */
+    .floating-particles,
+    .energy-rings,
+    .energy-lines,
+    .light-rays {
+      opacity: 0.6;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .particle {
+      width: 3px;
+      height: 3px;
+    }
+    
+    .energy-ring {
+      width: 30px !important;
+      height: 30px !important;
+    }
+    
+    .energy-line {
+      width: 60px !important;
+    }
+    
+    .floating-particles,
+    .energy-rings,
+    .energy-lines,
+    .light-rays {
+      opacity: 0.4;
     }
   }
 

@@ -19,7 +19,7 @@ import HeroAnimations from '../components/HeroAnimations.astro';
   <main class="relative overflow-hidden">
 
     <!-- Hero Section Corporate -->
-    <section class="relative px-6 py-20 md:py-32 bg-gradient-to-br from-blue-50 via-white to-orange-50 overflow-hidden">
+    <section class="relative px-4 sm:px-6 py-12 sm:py-20 md:py-32 bg-gradient-to-br from-blue-50 via-white to-orange-50 overflow-hidden">
       <!-- Brand Pattern Background -->
       <BrandPattern pattern="energy" intensity="subtle" color="mixed" />
       
@@ -27,40 +27,40 @@ import HeroAnimations from '../components/HeroAnimations.astro';
       <HeroAnimations />
 
       <div class="relative z-10 max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           <!-- Texte principal - positionnement asymétrique -->
-          <div class="lg:col-span-7 lg:col-start-2">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight hero-title">
+          <div class="lg:col-span-7 lg:col-start-2 text-center lg:text-left">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight hero-title">
               <span class="text-slate-900 animate-slide-up" style="animation-delay: 0.2s;">Solutions énergétiques</span>
               <br>
               <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-700 to-cyan-600 block animate-slide-up" style="animation-delay: 0.4s;">professionnelles</span>
               <br>
-              <span class="text-slate-700 text-2xl md:text-3xl lg:text-4xl font-medium mt-4 block animate-slide-up" style="animation-delay: 0.6s;">
+              <span class="text-slate-700 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium mt-3 sm:mt-4 block animate-slide-up" style="animation-delay: 0.6s;">
                 Expertise certifiée RGE en Gironde
               </span>
             </h1>
             
-            <p class="mt-8 text-lg text-slate-600 max-w-2xl leading-relaxed animate-fade-in" style="animation-delay: 0.8s;">
+            <p class="mt-6 sm:mt-8 text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed animate-fade-in" style="animation-delay: 0.8s;">
               Bordeaux Confort Énergie accompagne particuliers et professionnels dans leurs projets 
               de confort thermique avec des solutions techniques performantes, durables et conformes 
               aux normes environnementales les plus exigeantes.
             </p>
 
-            <div class="mt-12 flex flex-col sm:flex-row gap-4 animate-bounce-in" style="animation-delay: 1s;">
-              <button class="px-8 py-4 bg-gradient-to-r from-orange-600 to-orange-700 text-white rounded-lg font-semibold hover:from-orange-700 hover:to-orange-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105 relative overflow-hidden btn-shimmer">
+            <div class="mt-8 sm:mt-12 flex flex-col sm:flex-row gap-3 sm:gap-4 animate-bounce-in justify-center lg:justify-start" style="animation-delay: 1s;">
+              <button class="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-orange-600 to-orange-700 text-white rounded-lg font-semibold hover:from-orange-700 hover:to-orange-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105 relative overflow-hidden btn-shimmer text-sm sm:text-base">
                 <span class="relative z-10">Demander un devis gratuit</span>
               </button>
-              <button class="px-8 py-4 border-2 border-blue-600 text-blue-600 rounded-lg font-semibold hover:bg-blue-50 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+              <button class="px-6 sm:px-8 py-3 sm:py-4 border-2 border-blue-600 text-blue-600 rounded-lg font-semibold hover:bg-blue-50 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 text-sm sm:text-base">
                 Nos réalisations
               </button>
             </div>
           </div>
 
           <!-- Zone visuelle corporate -->
-          <div class="lg:col-span-4 relative animate-float" style="animation-delay: 1.2s;">
+          <div class="lg:col-span-4 relative animate-float mt-8 lg:mt-0" style="animation-delay: 1.2s;">
             <div class="relative">
               <!-- Image professionnelle -->
-              <div class="w-full h-96 rounded-lg shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 transform hover:scale-105 hover:rotate-1 relative">
+              <div class="w-full h-64 sm:h-80 lg:h-96 rounded-lg shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 transform hover:scale-105 hover:rotate-1 relative">
                 <img 
                   src="/images/installations/pac.jpg" 
                   alt="Installation pompe à chaleur BCE"
@@ -104,23 +104,23 @@ import HeroAnimations from '../components/HeroAnimations.astro';
     </section>
 
     <!-- Services Section Corporate -->
-    <section id="services" class="py-24 px-6 bg-white">
+    <section id="services" class="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 bg-white">
       <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-20">
+        <div class="text-center mb-12 sm:mb-16 lg:mb-20">
           <div class="inline-flex items-center space-x-2 bg-slate-100 px-4 py-2 rounded-full mb-6">
             <span class="text-slate-700 text-sm font-medium">NOS SERVICES</span>
           </div>
-          <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6 tracking-tight">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-4 sm:mb-6 tracking-tight">
             Expertise technique certifiée
           </h2>
-          <p class="text-lg text-slate-600 max-w-4xl mx-auto leading-relaxed">
+          <p class="text-base sm:text-lg text-slate-600 max-w-4xl mx-auto leading-relaxed px-4">
             Solutions professionnelles pour l'efficacité énergétique, le confort thermique et 
             la transition écologique, conçues et installées selon les standards les plus élevés.
           </p>
         </div>
 
         <!-- Services avec layout asymétrique -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-16">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6 mb-12 sm:mb-16">
           <ServiceCard 
             icon="air-conditioning"
             title="Climatisation réversible"
@@ -157,13 +157,19 @@ import HeroAnimations from '../components/HeroAnimations.astro';
     </section>
 
     <!-- Section Équipe -->
-    <TeamSection />
+    <div class="px-4 sm:px-0">
+      <TeamSection />
+    </div>
 
     <!-- Galerie de Réalisations -->
-    <RealizationsGallery />
+    <div class="px-4 sm:px-0">
+      <RealizationsGallery />
+    </div>
 
     <!-- Section Équipements -->
-    <EquipmentSection />
+    <div class="px-4 sm:px-0">
+      <EquipmentSection />
+    </div>
 
     <!-- Section Performance & Indicateurs -->
     <section class="py-20 px-6 bg-slate-50">
